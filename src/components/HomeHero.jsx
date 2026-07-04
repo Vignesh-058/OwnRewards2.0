@@ -16,13 +16,7 @@ const HomeHero = () => {
       <div className="container home-hero-container">
         {/* LEFT — Text */}
         <div className="home-hero-left">
-          <div
-            
-            
-            
-          >
-            <div className="hero-eyebrow">✨ AI-Powered Customer Retention</div>
-          </div>
+          <div className="hero-eyebrow">✨ AI-Powered Customer Retention</div>
 
           <h1 className="home-hero-h1 animate-on-scroll fade-up">
             <span>Stop losing customers.</span><br />
