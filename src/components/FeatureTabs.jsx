@@ -13,7 +13,7 @@ const tabs = [
 const LoyaltyMock = () => (
   <div id="mock-loyalty-card" className="mock-card tab-animate-in">
     <div className="mock-header">
-      <span className="mock-title">🏆 ownRewards</span>
+      <span className="mock-title">🏆 OwnRewards</span>
       <span className="mock-badge badge-gold">🥇 GOLD</span>
     </div>
     <div className="mock-subtitle" style={{ marginBottom: '20px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
@@ -287,7 +287,7 @@ const FeatureTabs = () => {
     <section id="feature-tabs" className="feature-tabs animate-on-scroll fade-up">
       <div className="container">
         <div className="section-header text-center">
-          <h2 className="section-title animate-on-scroll fade-up">See ownRewards <span className="gradient-text">in action</span></h2>
+          <h2 className="section-title animate-on-scroll fade-up">See OwnRewards <span className="gradient-text">in action</span></h2>
         </div>
 
         {/* Tab Buttons */}

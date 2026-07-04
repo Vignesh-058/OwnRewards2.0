@@ -6,14 +6,14 @@ const products = [
     id: 'eco-ownchat',
     icon: '💬',
     title: 'ownChat',
-    body: 'WhatsApp Business platform for customer conversations, automated flows, and broadcast campaigns. Powers all ownRewards notifications.',
+    body: 'WhatsApp Business platform for customer conversations, automated flows, and broadcast campaigns. Powers all OwnRewards notifications.',
     status: 'Connected',
     statusType: 'connected'
   },
   {
-    id: 'eco-ownrewards',
+    id: 'eco-OwnRewards',
     icon: '🏆',
-    title: 'ownRewards',
+    title: 'OwnRewards',
     body: 'Intelligent loyalty and retention engine. Points, tiers, rules, rewards, coupons, referrals, and analytics.',
     status: 'You are here',
     statusType: 'here'
@@ -22,7 +22,7 @@ const products = [
     id: 'eco-owncart',
     icon: '🛒',
     title: 'ownCart',
-    body: 'E-commerce and inventory management. Product catalog, order management, and direct ownRewards integration for point-of-sale rewards.',
+    body: 'E-commerce and inventory management. Product catalog, order management, and direct OwnRewards integration for point-of-sale rewards.',
     status: 'Integration available',
     statusType: 'available'
   },
@@ -43,7 +43,7 @@ const AboutEcosystem = () => {
         <div className="section-header text-center">
           <h2 className="section-title animate-on-scroll fade-up">Part of the <span className="gradient-text">iEyal product family</span></h2>
           <p className="section-subtitle mt-4 mx-auto" style={{ maxWidth: '600px' }}>
-            ownRewards works best as part of an integrated stack. Here's what we build.
+            OwnRewards works best as part of an integrated stack. Here's what we build.
           </p>
         </div>
 

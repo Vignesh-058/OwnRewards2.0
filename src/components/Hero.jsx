@@ -46,7 +46,7 @@ const Hero = () => {
               Supercharge Customer Retention with <span className="gradient-text">Intelligent Rewards</span>
             </h1>
             <p className="hero-subtitle animate-on-scroll fade-up">
-              ownRewards is the intelligent loyalty and retention platform for growing businesses — combining points, rewards, coupons, referrals, and AI-driven rules in one engine.
+              OwnRewards is the intelligent loyalty and retention platform for growing businesses — combining points, rewards, coupons, referrals, and AI-driven rules in one engine.
             </p>
             <div className="hero-actions">
               <Link to="/dashboard" style={{ textDecoration: 'none' }}>

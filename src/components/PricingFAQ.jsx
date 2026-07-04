@@ -5,12 +5,12 @@ const faqs = [
   {
     id: 'faq-1',
     q: 'Can I import my existing customers?',
-    a: 'Yes. ownRewards supports bulk CSV customer import with automatic loyalty enrollment. Existing point balances can be migrated too.'
+    a: 'Yes. OwnRewards supports bulk CSV customer import with automatic loyalty enrollment. Existing point balances can be migrated too.'
   },
   {
     id: 'faq-2',
     q: 'Does it work with Petpooja POS?',
-    a: 'Yes. ownRewards natively integrates with Petpooja. Bills sync in real time and trigger automatic point calculation and rule evaluation.'
+    a: 'Yes. OwnRewards natively integrates with Petpooja. Bills sync in real time and trigger automatic point calculation and rule evaluation.'
   },
   {
     id: 'faq-3',

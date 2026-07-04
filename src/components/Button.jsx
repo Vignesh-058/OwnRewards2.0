@@ -11,7 +11,7 @@ const Button = ({
   onClick,
   ...props 
 }) => {
-  const baseClass = `btn btn-${variant} ${className}`;
+  const baseClass = `btn btn-${variant} hover-glow ${className}`;
   
   return (
     <button id="button-btn-1" 

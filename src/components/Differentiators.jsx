@@ -26,7 +26,7 @@ const Differentiators = () => (
   <section id="differentiators" className="differentiators">
     <div className="container">
       <div className="section-header text-center">
-        <h2 className="section-title animate-on-scroll fade-up">Why businesses choose <span className="gradient-text">ownRewards</span></h2>
+        <h2 className="section-title animate-on-scroll fade-up">Why businesses choose <span className="gradient-text">OwnRewards</span></h2>
       </div>
 
       <div

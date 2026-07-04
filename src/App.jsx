@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { DemoProvider } from './context/DemoContext';
 import ScrollToTop from './components/ScrollToTop';
 import Loading from './components/Loading';
+import CookieConsent from './components/CookieConsent';
+import ChatWidget from './components/ChatWidget';
+import ExitIntentModal from './components/ExitIntentModal';
 
 const MainLayout = lazy(() => import('./layouts/MainLayout'));
 const Home = lazy(() => import('./pages/Home'));
@@ -40,6 +43,9 @@ function App() {
             <Route path="/register" element={<Register />} />
           </Routes>
         </Suspense>
+        <CookieConsent />
+        <ChatWidget />
+        <ExitIntentModal />
       </BrowserRouter>
     </DemoProvider>
   );

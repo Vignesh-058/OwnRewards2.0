@@ -10,7 +10,7 @@ const FinalCTA = () => {
         <div className="cta-wrapper">
           <div className="cta-content">
             <h2>Ready to turn one-time buyers into lifelong regulars?</h2>
-            <p>Join growing businesses using ownRewards to drive revenue and increase customer retention — no credit card required.</p>
+            <p>Join growing businesses using OwnRewards to drive revenue and increase customer retention — no credit card required.</p>
             <div className="cta-actions">
               <Link to="/register" style={{ textDecoration: 'none' }}>
                 <button id="finalcta-btn-2" style={{

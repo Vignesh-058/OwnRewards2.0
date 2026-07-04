@@ -6,7 +6,7 @@ const steps = [
     id: 'step-1',
     icon: '🧾',
     title: 'Customer Makes a Purchase',
-    body: 'A bill is created in the POS (Petpooja or custom). ownRewards receives the bill event via webhook — including order amount, items, and customer phone number.',
+    body: 'A bill is created in the POS (Petpooja or custom). OwnRewards receives the bill event via webhook — including order amount, items, and customer phone number.',
     pill: 'Event: bill_created'
   },
   {
@@ -41,7 +41,7 @@ const steps = [
     id: 'step-6',
     icon: '🔄',
     title: 'Customer Returns to Redeem',
-    body: 'On next visit, the customer requests redemption. ownRewards checks minimum order value, point maturation days, cooldown hours, and blocked days. If OTP is required, a WhatsApp OTP is sent.',
+    body: 'On next visit, the customer requests redemption. OwnRewards checks minimum order value, point maturation days, cooldown hours, and blocked days. If OTP is required, a WhatsApp OTP is sent.',
     pill: 'Redemption Rules: 8 Controls'
   },
   {

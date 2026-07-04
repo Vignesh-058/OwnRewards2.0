@@ -10,7 +10,7 @@ const PricingPage = () => {
   return (
     <>
       <SEO 
-        title="ownRewards Pricing — Loyalty Plans That Scale With Your Business"
+        title="OwnRewards Pricing — Loyalty Plans That Scale With Your Business"
         description="Start free with core loyalty features. Scale to advanced rules, referrals, and analytics as your customer base grows."
         path="pricing.html"
       />

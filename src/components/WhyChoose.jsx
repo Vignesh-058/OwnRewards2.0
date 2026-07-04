@@ -1,50 +1,29 @@
 import React from 'react';
-import { Settings, Infinity as InfinityIcon, MessageSquare, BarChart2, Zap, ShieldCheck } from 'lucide-react';
 import GlassCard from './GlassCard';
 import './WhyChoose.css';
 
 const WhyChoose = () => {
   const reasons = [
     {
-      icon: <Settings size={28} />,
-      title: "Automation First",
-      description: "Set up triggers once and let the engine run your campaigns 24/7.",
+      icon: "🧠",
+      title: "Rules That Think",
+      description: "Not just \"earn 1 point per ₹100\". Set 30+ trigger events — birthday, nth visit, inactivity, feedback, referral — and automate any action: bonus points, reward grants, tier changes, coupon issuance.",
       className: "bento-span-4"
     },
     {
-      icon: <InfinityIcon size={28} />,
-      title: "Unlimited Programs",
-      description: "Create as many tiers, point systems, and referral programs as you need.",
+      icon: "🏆",
+      title: "Tiers That Mean Something",
+      description: "Bronze → Silver → Gold → Platinum with dynamic progression, tier-based multipliers, and lifecycle stage tracking (active, at-risk, churned). Customers feel the difference.",
       className: "bento-span-4"
     },
     {
-      icon: <MessageSquare size={28} />,
-      title: "WhatsApp Integration",
-      description: "Reach customers where they are with automated WhatsApp notifications.",
+      icon: "📊",
+      title: "Analytics That Drive Decisions",
+      description: "Track cohort retention curves, reward ROI, product correlations, and customer lifetime value — not just points totals.",
       className: "bento-span-4"
-    },
-    {
-      icon: <BarChart2 size={28} />,
-      title: "Deep Analytics",
-      description: "Track every point issued, redeemed, and the resulting revenue impact.",
-      className: "bento-span-6"
-    },
-    {
-      icon: <Zap size={28} />,
-      title: "Fast Setup",
-      description: "Pre-built templates mean you can go live in under 15 minutes.",
-      className: "bento-span-3"
-    },
-    {
-      icon: <ShieldCheck size={28} />,
-      title: "Enterprise Security",
-      description: "Bank-grade encryption ensures your customer data is always protected.",
-      className: "bento-span-3"
     }
   ];
 
-  
-  
   return (
     <section id="whychoose-sec-1" className="why-choose relative overflow-hidden">
       <div className="container relative z-10">

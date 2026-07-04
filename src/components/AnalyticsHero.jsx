@@ -19,7 +19,7 @@ const AnalyticsHero = () => {
           
           
         >
-          ownRewards' analytics engine tracks every transaction, every reward, every referral — 
+          OwnRewards' analytics engine tracks every transaction, every reward, every referral — 
           and surfaces the insights that actually change business decisions.
         </p>
       </div>

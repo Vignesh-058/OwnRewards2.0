@@ -25,7 +25,7 @@ const SEO = ({ title, description, path }) => {
     setMeta('description', description);
     
     // Canonical link
-    const url = `https://ownrewards.app/${path}`;
+    const url = `https://OwnRewards.app/${path}`;
     let link = document.querySelector(`link[rel="canonical"]`);
     if (!link) {
       link = document.createElement('link');
@@ -39,7 +39,7 @@ const SEO = ({ title, description, path }) => {
     setMeta('og:description', description);
     setMeta('og:type', 'website');
     setMeta('og:url', url);
-    setMeta('og:site_name', 'ownRewards');
+    setMeta('og:site_name', 'OwnRewards');
 
     // 4. Twitter Card
     setMeta('twitter:card', 'summary_large_image');

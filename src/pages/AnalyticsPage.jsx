@@ -10,7 +10,7 @@ const AnalyticsPage = () => {
   return (
     <>
       <SEO 
-        title="ownRewards Analytics — Loyalty ROI, Cohort & Retention Insights"
+        title="OwnRewards Analytics — Loyalty ROI, Cohort & Retention Insights"
         description="Track loyalty program ROI, reward conversion rates, cohort retention curves, tier distribution, and product performance — all in real time."
         path="analytics.html"
       />

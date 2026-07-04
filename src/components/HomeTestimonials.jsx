@@ -4,7 +4,7 @@ import './HomeTestimonials.css';
 
 const testimonials = [
   {
-    quote: "ownRewards' birthday automation brought back 34% of churned customers in just 90 days. Nothing else we tried came close.",
+    quote: "OwnRewards' birthday automation brought back 34% of churned customers in just 90 days. Nothing else we tried came close.",
     name: "Marketing Head",
     role: "QSR Chain (6 outlets)",
     rating: 5

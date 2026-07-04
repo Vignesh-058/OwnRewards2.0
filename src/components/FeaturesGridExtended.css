@@ -1,0 +1,49 @@
+.features-grid-ext-section {
+  background: transparent;
+  padding-bottom: 80px;
+}
+
+.fg-ext-group {
+  margin-bottom: 64px;
+}
+
+.fg-ext-group:last-child {
+  margin-bottom: 0;
+}
+
+.fg-ext-group-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.fg-ext-group-badge {
+  display: inline-block;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+}
+
+.fg-ext-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .fg-ext-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .fg-ext-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -4,7 +4,7 @@ import './DeveloperSection.css';
 import Button from './Button';
 
 const codeString = `// Award points for an order
-const response = await fetch('https://api.ownrewards.io/v1/rewards', {
+const response = await fetch('https://api.OwnRewards.io/v1/rewards', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer sk_live_...',

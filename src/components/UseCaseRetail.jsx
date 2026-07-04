@@ -62,7 +62,7 @@ const UseCaseRetail = () => {
               </div>
               
               <div className="uc-list-block uc-list-success animate-on-scroll fade-up">
-                <h4><CheckCircle2 size={16} strokeWidth={2.5} /> ownRewards Solution</h4>
+                <h4><CheckCircle2 size={16} strokeWidth={2.5} /> OwnRewards Solution</h4>
                 <ul>
                   <li className="success-li"><div className="icon"><CheckCircle2 size={18} /></div> <div><strong>Rule-Gated Coupons</strong> — Only Gold+ tier customers can access exclusive early-access promotions</div></li>
                   <li className="success-li"><div className="icon"><CheckCircle2 size={18} /></div> <div><strong>Category-Specific Coupons</strong> — <code>SHOE20</code> applies only to footwear category, not entire cart</div></li>

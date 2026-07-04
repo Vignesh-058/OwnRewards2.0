@@ -7,8 +7,8 @@ const AboutPage = () => {
   return (
     <>
       <SEO 
-        title="About ownRewards — Built by iEyal Solutions"
-        description="Learn how ownRewards was built from real restaurant and retail frustrations — and why it's the only loyalty platform growing businesses need."
+        title="About OwnRewards — Built by iEyal Solutions"
+        description="Learn how OwnRewards was built from real restaurant and retail frustrations — and why it's the only loyalty platform growing businesses need."
         path="about.html"
       />
       <AboutHero />

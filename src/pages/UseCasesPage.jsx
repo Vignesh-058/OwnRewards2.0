@@ -10,8 +10,8 @@ const UseCasesPage = () => {
   return (
     <>
       <SEO 
-        title="ownRewards Use Cases — Restaurants, Retail & E-Commerce"
-        description="Discover how restaurant chains, retail brands, and online stores use ownRewards to drive repeat purchases and grow customer lifetime value."
+        title="OwnRewards Use Cases — Restaurants, Retail & E-Commerce"
+        description="Discover how restaurant chains, retail brands, and online stores use OwnRewards to drive repeat purchases and grow customer lifetime value."
         path="use-cases.html"
       />
       <UseCasesHero />

@@ -8,8 +8,8 @@ const HowItWorksPage = () => {
   return (
     <>
       <SEO 
-        title="How ownRewards Works — From First Visit to Loyal Customer"
-        description="See exactly how ownRewards automates loyalty earning, reward issuance, coupon delivery, and referral rewards — triggered by real business events."
+        title="How OwnRewards Works — From First Visit to Loyal Customer"
+        description="See exactly how OwnRewards automates loyalty earning, reward issuance, coupon delivery, and referral rewards — triggered by real business events."
         path="how-it-works.html"
       />
       <HiwHero />

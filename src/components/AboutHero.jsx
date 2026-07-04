@@ -42,7 +42,7 @@ const AboutHero = () => {
             
           >
             <div className="about-label">ORIGIN STORY</div>
-            <h2 className="about-subtitle">Why we built ownRewards</h2>
+            <h2 className="about-subtitle">Why we built OwnRewards</h2>
             <p className="about-text">
               We watched restaurant owners hand out paper stamp cards with no data, no 
               automation, and no idea which customers were about to leave. We watched retail 
@@ -50,7 +50,7 @@ const AboutHero = () => {
               what actually worked.
             </p>
             <p className="about-text">
-              ownRewards was built to change that. To give every business — from a 2-outlet 
+              OwnRewards was built to change that. To give every business — from a 2-outlet 
               restaurant chain to a 500-SKU retail brand — a loyalty and retention engine 
               that actually drives measurable business outcomes.
             </p>

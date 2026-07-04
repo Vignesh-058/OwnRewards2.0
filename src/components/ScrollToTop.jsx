@@ -7,40 +7,27 @@ const ScrollToTop = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    // Setup global scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          // Stop observing once animated
           observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1, rootMargin: '-50px' });
 
-    // Initial observe for synchronous elements
-    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-
-    // Watch for dynamically added elements from React.lazy/Suspense
-    const mutationObserver = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.nodeType === 1) { // ELEMENT_NODE
-            if (node.classList.contains('animate-on-scroll')) {
-              observer.observe(node);
-            }
-            // Also check any children inside the newly added node
-            node.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-          }
-        });
+    // Robust polling to catch elements as they mount from React.lazy/Suspense
+    const intervalId = setInterval(() => {
+      const elements = document.querySelectorAll('.animate-on-scroll:not(.is-observed)');
+      elements.forEach(el => {
+        el.classList.add('is-observed'); // Mark so we don't observe twice
+        observer.observe(el);
       });
-    });
-
-    mutationObserver.observe(document.body, { childList: true, subtree: true });
+    }, 200);
 
     return () => {
+      clearInterval(intervalId);
       observer.disconnect();
-      mutationObserver.disconnect();
     };
   }, [pathname]);
 

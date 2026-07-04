@@ -30,7 +30,7 @@ const UseCaseEcommerce = () => {
               </div>
               
               <div className="uc-list-block uc-list-success animate-on-scroll fade-up">
-                <h4><CheckCircle2 size={16} strokeWidth={2.5} /> ownRewards Solution</h4>
+                <h4><CheckCircle2 size={16} strokeWidth={2.5} /> OwnRewards Solution</h4>
                 <ul>
                   <li className="success-li"><div className="icon"><CheckCircle2 size={18} /></div> <div><strong>Dual-Sided Referral</strong> — Referrer gets 500 points; Referee gets ₹100 flat discount on first order</div></li>
                   <li className="success-li"><div className="icon"><CheckCircle2 size={18} /></div> <div><strong>Loyalty-Gated Referral Access</strong> — Must be Silver+, 30+ days as member, ₹2,000+ lifetime spend</div></li>

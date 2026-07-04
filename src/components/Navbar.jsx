@@ -72,9 +72,8 @@ const Navbar = () => {
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
 
-            {/* Single primary CTA */}
             <Link to="/register" className="hidden-mobile" style={{ textDecoration: 'none' }}>
-              <button id="navbar-btn-2" className="navbar-cta-btn">
+              <button id="navbar-btn-2" className="navbar-cta-btn hover-glow">
                 Start Free <ArrowRight size={15} style={{ marginLeft: '4px', verticalAlign: 'middle' }} />
               </button>
             </Link>

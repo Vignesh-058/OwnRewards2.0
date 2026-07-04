@@ -89,14 +89,14 @@ const AnalyticsDashboardMock = () => {
             <div className="db-topbar">
               <div className="db-search">
                 <Search size={16} className="db-search-icon" />
-                <input type="text" placeholder="Search Ownrewards" />
+                <input type="text" placeholder="Search OwnRewards" />
                 <div className="db-search-shortcut">
                   <span>Ctrl</span><span>K</span>
                 </div>
               </div>
               <div className="db-topbar-actions">
                 <div className="db-outlet-selector">
-                  <Store size={14} /> ownrewards ▾
+                  <Store size={14} /> OwnRewards ▾
                 </div>
                 <button id="analyticsdashboardmock-btn-2" className="db-icon-btn"><Settings size={18} /></button>
                 <div className="db-user-profile">

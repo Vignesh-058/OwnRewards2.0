@@ -39,7 +39,7 @@ const Contact = () => {
                 <div className="method-icon"><Mail size={24} /></div>
                 <div>
                   <h4>Email Us</h4>
-                  <p>hello@ownrewards.io</p>
+                  <p>hello@OwnRewards.io</p>
                   <p className="text-sm text-primary mt-1">We aim to reply within 2 hours</p>
                 </div>
               </GlassCard>

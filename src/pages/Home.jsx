@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="ownRewards — Smart Loyalty & Retention Platform for Growing Businesses"
+        title="OwnRewards — Smart Loyalty & Retention Platform for Growing Businesses"
         description="Build a loyalty program that actually drives repeat business. Points, rewards, coupons, referrals, and automated rules — all in one intelligent platform."
         path="index.html"
       />

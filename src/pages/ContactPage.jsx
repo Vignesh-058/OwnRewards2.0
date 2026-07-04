@@ -9,8 +9,8 @@ const ContactPage = () => {
   return (
     <>
       <SEO 
-        title="Contact ownRewards — We're here to help"
-        description="Get in touch with the ownRewards team for support, sales inquiries, or to book a demo."
+        title="Contact OwnRewards — We're here to help"
+        description="Get in touch with the OwnRewards team for support, sales inquiries, or to book a demo."
         path="contact"
       />
       <AnimatedSection animation="animate-fade-up">

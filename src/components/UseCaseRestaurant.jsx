@@ -31,7 +31,7 @@ const UseCaseRestaurant = () => {
               </div>
               
               <div className="uc-list-block uc-list-success animate-on-scroll fade-up">
-                <h4><CheckCircle2 size={16} strokeWidth={2.5} /> ownRewards Solution</h4>
+                <h4><CheckCircle2 size={16} strokeWidth={2.5} /> OwnRewards Solution</h4>
                 <ul>
                   <li className="success-li"><div className="icon"><CheckCircle2 size={18} /></div> <div><strong>Petpooja Integration</strong> — Bills auto-sync, points calculated in real time at every outlet</div></li>
                   <li className="success-li"><div className="icon"><CheckCircle2 size={18} /></div> <div><strong>Birthday Rule</strong> — <code>customer_birthday</code> → <code>+500 bonus points + BDAY20 coupon</code> → WhatsApp notification fires automatically</div></li>

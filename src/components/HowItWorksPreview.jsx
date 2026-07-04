@@ -13,7 +13,7 @@ const steps = [
     num: '02',
     icon: '⚡',
     title: 'Rules Fire on Real Events',
-    body: 'Every bill, birthday, referral, feedback, or inactivity — ownRewards listens and acts automatically. No manual work, no missed opportunities.',
+    body: 'Every bill, birthday, referral, feedback, or inactivity — OwnRewards listens and acts automatically. No manual work, no missed opportunities.',
   },
   {
     num: '03',

@@ -12,53 +12,146 @@
   grid-template-columns: 1fr;
   gap: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid var(--border-light);
   align-items: flex-start; /* Align all footer columns to the same top height */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer-top {
-    /* Equal spacing between Product, Resources, Contact */
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 60px;
+    /* 5 columns layout for desktop */
+    grid-template-columns: 2fr 1fr 1fr 1.5fr 1.2fr;
+    gap: 40px;
   }
 }
 
+.footer-social-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.app-badge-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 16px 6px 12px;
+  color: var(--text);
+  transition: all 0.2s ease;
+  width: 160px;
+  text-decoration: none;
+}
+
+.app-badge-btn:hover {
+  background: var(--surface-hover, rgba(111, 77, 230, 0.05));
+  border-color: var(--primary);
+}
+
+.app-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-badge-sub {
+  font-size: 0.6rem;
+  line-height: 1;
+  margin-bottom: 3px;
+  color: var(--text-secondary);
+}
+
+.app-badge-main {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
 .footer-brand {
-  max-width: 320px;
+  max-width: 340px;
+}
+
+.footer-brand-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  color: var(--text);
 }
 
 .footer-description {
-  margin-top: 20px;
   color: var(--text-secondary);
   line-height: 1.6;
+  margin-bottom: 24px;
   font-size: 0.95rem;
+}
+
+.meta-partner-badge {
+  background: var(--surface, #fff);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  transition: transform 0.2s ease;
+}
+
+.meta-partner-badge:hover {
+  transform: scale(1.03);
+}
+
+.meta-logo {
+  height: 18px;
+  margin-bottom: 2px;
+}
+
+.meta-partner-text {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 0.2px;
 }
 
 .footer-social {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .social-link {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--surface-hover);
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-tertiary);
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--border-light, rgba(0,0,0,0.05));
+  border-radius: 12px;
+  color: var(--primary);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .social-link:hover {
-  background: var(--surface);
+  background: #ffffff;
   color: var(--primary);
-  border-color: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(111, 77, 230, 0.15);
+  border-color: rgba(111, 77, 230, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -6px rgba(111, 77, 230, 0.2);
 }
 
 /* Footer Links */
@@ -108,31 +201,59 @@
   justify-content: space-between;
   gap: 24px;
   padding-top: 32px;
+  border-top: 1px solid var(--border-light); /* Fixed subtle separator */
 }
 
 @media (min-width: 768px) {
   .footer-bottom {
     flex-direction: row;
+    align-items: center;
   }
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-copyright {
+    text-align: left;
+  }
+}
+
+.copyright-main {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.copyright-main span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.copyright-sub {
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 .footer-legal {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
+  padding-right: 70px; /* Prevent chat icon from hiding options */
 }
 
 .footer-legal a {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   font-size: 0.875rem;
   transition: color 0.2s ease;
 }
 
 .footer-legal a:hover {
-  color: var(--text);
-}
-
-.copyright {
-  color: var(--text-tertiary);
-  font-size: 0.875rem;
+  color: var(--primary);
 }
