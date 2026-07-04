@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 import './FAQ.css';
 
@@ -34,10 +33,10 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-section relative overflow-hidden">
+    <section id="faq-sec-1" className="faq-section relative overflow-hidden">
       <div className="container relative z-10 max-w-3xl mx-auto">
         <div className="section-header text-center mb-12">
-          <h2 className="section-title">Frequently Asked <span className="gradient-text">Questions</span></h2>
+          <h2 className="section-title animate-on-scroll fade-up">Frequently Asked <span className="gradient-text">Questions</span></h2>
           <p className="section-subtitle mt-4">Everything you need to know about the product and billing.</p>
         </div>
 
@@ -56,17 +55,17 @@ const FAQ = () => {
               </div>
               <AnimatePresence>
                 {activeIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  <div
+                    
+                    
+                    
+                    
                     className="faq-answer-container"
                   >
                     <div className="faq-answer">
                       {faq.answer}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
               </AnimatePresence>
             </div>

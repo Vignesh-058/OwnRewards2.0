@@ -29,11 +29,11 @@ const Register = () => {
           <div className="auth-left-content">
             <h1>Start your loyalty journey</h1>
             
-            <div className="auth-features">
-              <div className="auth-feature-pill">
+            <div className="auth-features animate-on-scroll fade-up">
+              <div className="auth-feature-pill animate-on-scroll fade-up">
                 <CheckCircle2 size={16} /> 14-day free trial
               </div>
-              <div className="auth-feature-pill">
+              <div className="auth-feature-pill animate-on-scroll fade-up">
                 <CheckCircle2 size={16} /> No credit card required
               </div>
             </div>
@@ -41,9 +41,9 @@ const Register = () => {
         </div>
         
         <div className="auth-right">
-          <div className="auth-card">
-            <div className="auth-card-header">
-              <div className="auth-card-logo">
+          <div id="register-div-1" className="auth-card animate-on-scroll fade-up">
+            <div id="register-div-2" className="auth-card-header animate-on-scroll fade-up">
+              <div id="register-div-3" className="auth-card-logo animate-on-scroll fade-up">
                 <Logo size={40} />
               </div>
               <h2>Create an account</h2>

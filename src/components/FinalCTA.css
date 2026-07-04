@@ -1,6 +1,6 @@
 .final-cta {
   padding: 100px 24px 100px;
-  background: var(--background);
+  background: transparent;
 }
 
 .cta-wrapper {
@@ -48,7 +48,7 @@
 }
 
 .cta-actions .btn-primary:hover {
-  background: var(--background);
+  background: transparent;
   color: var(--primary-dark);
 }
 

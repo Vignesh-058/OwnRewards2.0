@@ -1,0 +1,89 @@
+.pricing-hero {
+  position: relative;
+  padding: 100px 0 60px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.pricing-title {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.pricing-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Billing Toggle */
+.billing-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.billing-toggle-pill {
+  display: inline-flex;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.bt-option {
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bt-option.active {
+  background: transparent;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.bt-save {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.pricing-hero-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pricing-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .pricing-hero {
+    padding: 60px 0 40px;
+  }
+}

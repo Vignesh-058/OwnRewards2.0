@@ -1,0 +1,134 @@
+.features-grid-section {
+  background: transparent;
+  padding-bottom: 80px;
+}
+
+.fg-group {
+  margin-bottom: 64px;
+}
+
+.fg-group:last-child {
+  margin-bottom: 0;
+}
+
+.fg-group-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.fg-group-badge {
+  display: inline-block;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+}
+
+.fg-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.fg-card-wrapper {
+  display: flex;
+}
+
+.fg-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.fg-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, rgba(111, 77, 230, 0.08), rgba(236, 72, 153, 0.08));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fg-card:hover {
+  border-color: rgba(111, 77, 230, 0.4);
+}
+
+.fg-card:hover::after {
+  opacity: 1;
+}
+
+.fg-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme='dark'] .fg-card::after {
+  background: linear-gradient(135deg, rgba(111, 77, 230, 0.15), rgba(236, 72, 153, 0.15));
+}
+
+.fg-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(111, 77, 230, 0.1), rgba(111, 77, 230, 0.02));
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(111, 77, 230, 0.1);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.fg-card:hover .fg-icon {
+  transform: scale(1.1) translateY(-4px);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-color: var(--primary);
+  box-shadow: 0 8px 20px rgba(111, 77, 230, 0.3), 0 0 0 4px rgba(111, 77, 230, 0.1);
+  animation: fgPulseIcon 2s infinite ease-in-out alternate;
+}
+
+@keyframes fgPulseIcon {
+  0% { box-shadow: 0 8px 20px rgba(111, 77, 230, 0.3), 0 0 0 4px rgba(111, 77, 230, 0.1); }
+  100% { box-shadow: 0 12px 28px rgba(111, 77, 230, 0.5), 0 0 0 6px rgba(111, 77, 230, 0.2); }
+}
+
+.fg-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.fg-body {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .fg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .fg-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

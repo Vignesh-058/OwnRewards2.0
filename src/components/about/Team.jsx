@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { User, Globe, MessageCircle } from 'lucide-react';
 import GlassCard from '../GlassCard';
 
@@ -28,21 +27,21 @@ const Team = () => {
   ];
 
   return (
-    <section className="team-section relative">
+    <section id="team-sec-1" className="team-section relative">
       <div className="container relative z-10">
         <div className="section-header text-center mb-16">
-          <h2 className="section-title">Meet the <span className="gradient-text">Leadership</span></h2>
+          <h2 className="section-title animate-on-scroll fade-up">Meet the <span className="gradient-text">Leadership</span></h2>
           <p className="section-subtitle mt-4">The experienced team driving the future of loyalty.</p>
         </div>
 
-        <div className="team-grid">
+        <div className="team-grid animate-on-scroll fade-up">
           {team.map((member, index) => (
-            <motion.div 
+            <div 
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              
+              
+              
+              
             >
               <GlassCard className="team-member hover-lift h-full">
                 <div className="team-avatar">
@@ -57,7 +56,7 @@ const Team = () => {
                   <a href="#" className="hover:text-primary transition-colors"><MessageCircle size={18} /></a>
                 </div>
               </GlassCard>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,29 +1,28 @@
 import React, { useRef } from 'react';
-import { Link, Settings, MessageCircle, TrendingUp } from 'lucide-react';
-import { motion, useScroll } from 'framer-motion';
+import { PlugZap, Settings2, Megaphone, TrendingUp } from 'lucide-react';
 import './HowItWorks.css';
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: <Link size={28} />,
+      icon: <PlugZap size={28} />,
       title: "Connect",
-      description: "Integrate with Shopify, WooCommerce, or your custom POS in just a few clicks."
+      description: "Integrate with Shopify, WooCommerce, or your custom POS in minutes via our REST API or one-click plugins. All purchase events flow in automatically."
     },
     {
-      icon: <Settings size={28} />,
-      title: "Configure",
-      description: "Set up reward tiers, points logic, and referral rules using our visual builder."
+      icon: <Settings2 size={28} />,
+      title: "Configure Rules",
+      description: "Use the visual Rule Engine to define 30+ event triggers — award points on purchase, grant rewards at tier milestones, issue coupons on referrals, and more."
     },
     {
-      icon: <MessageCircle size={28} />,
-      title: "Engage",
-      description: "Launch automated campaigns and notify customers via email or WhatsApp."
+      icon: <Megaphone size={28} />,
+      title: "Launch Campaigns",
+      description: "Run targeted campaigns — birthday rewards, win-back offers, tier upgrade nudges — with A/B testing and omnichannel delivery via email, SMS, and WhatsApp."
     },
     {
       icon: <TrendingUp size={28} />,
-      title: "Grow",
-      description: "Watch your customer lifetime value and retention rates climb steadily."
+      title: "Grow with Analytics",
+      description: "Track reward ROI, cohort retention, tier distribution, and LTV prediction in real-time. Use insights to fine-tune rules and watch customer lifetime value climb."
     }
   ];
 
@@ -34,44 +33,44 @@ const HowItWorks = () => {
   });
 
   return (
-    <section className="how-it-works relative" ref={containerRef}>
+    <section id="howitworks-sec-1" className="how-it-works relative" ref={containerRef}>
       <div className="container relative z-10">
         <div className="section-header text-center mb-16">
-          <h2 className="section-title">Launch in <span className="text-primary">minutes</span>, not months</h2>
-          <p className="section-subtitle">A seamless onboarding experience designed to get your loyalty program live instantly.</p>
+          <h2 className="section-title animate-on-scroll fade-up">From setup to <span className="text-primary">results</span> — in minutes</h2>
+          <p className="section-subtitle">A seamless workflow designed to get your loyalty engine live and delivering ROI instantly.</p>
         </div>
 
         <div className="hiw-timeline">
           {/* Timeline line */}
           <div className="hiw-line-track"></div>
-          <motion.div 
-            className="hiw-line-fill" 
+          <div
+            className="hiw-line-fill"
             style={{ scaleX: scrollYProgress, transformOrigin: 'left' }}
           />
-          
+
           <div className="hiw-steps">
             {steps.map((step, index) => (
-              <motion.div 
+              <div
                 key={index}
                 className="hiw-step"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.15, type: 'spring', stiffness: 100 }}
-                viewport={{ once: true, margin: "-50px" }}
+                
+                
+                
+                
               >
                 <div className="hiw-icon-ring">
                   <div className="hiw-icon">{step.icon}</div>
                 </div>
-                <div className="hiw-card">
+                <div id="howitworks-div-2" className="hiw-card animate-on-scroll fade-up">
                   <h3 className="hiw-title">{index + 1}. {step.title}</h3>
                   <p className="hiw-desc">{step.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </div>
-      
+
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary opacity-5 blur-[150px] rounded-full pointer-events-none -z-10" />
     </section>

@@ -29,11 +29,11 @@ const Login = () => {
           <div className="auth-left-content">
             <h1>Welcome back to OwnRewards</h1>
             
-            <div className="auth-features">
-              <div className="auth-feature-pill">
+            <div className="auth-features animate-on-scroll fade-up">
+              <div className="auth-feature-pill animate-on-scroll fade-up">
                 <CheckCircle2 size={16} /> Data synced
               </div>
-              <div className="auth-feature-pill">
+              <div className="auth-feature-pill animate-on-scroll fade-up">
                 <CheckCircle2 size={16} /> Secure login
               </div>
             </div>
@@ -41,9 +41,9 @@ const Login = () => {
         </div>
         
         <div className="auth-right">
-          <div className="auth-card">
-            <div className="auth-card-header">
-              <div className="auth-card-logo">
+          <div id="login-div-1" className="auth-card animate-on-scroll fade-up">
+            <div id="login-div-2" className="auth-card-header animate-on-scroll fade-up">
+              <div id="login-div-3" className="auth-card-logo animate-on-scroll fade-up">
                 <Logo size={40} />
               </div>
               <h2>Sign in to your account</h2>

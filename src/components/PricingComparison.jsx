@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Check, Minus, Info } from 'lucide-react';
 import './PricingComparison.css';
 
@@ -43,17 +42,17 @@ const PricingComparison = () => {
   };
 
   return (
-    <div className="pricing-comparison mt-32">
+    <div className="pricing-comparison mt-32 animate-on-scroll fade-up">
       <div className="section-header text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold">Compare <span className="gradient-text">Plans</span></h2>
         <p className="section-subtitle mt-4">A detailed breakdown of everything included in each tier.</p>
       </div>
 
-      <div className="comparison-table-wrapper">
+      <div id="pricingcomparison-div-1" className="comparison-table-wrapper">
         <table className="comparison-table">
           <thead>
             <tr>
-              <th className="feature-column text-left">Features</th>
+              <th className="feature-column text-left animate-on-scroll fade-up">Features</th>
               <th>Starter</th>
               <th>Growth</th>
               <th>Enterprise</th>
@@ -66,9 +65,9 @@ const PricingComparison = () => {
                   <td colSpan="4">{category.category}</td>
                 </tr>
                 {category.items.map((item, itemIdx) => (
-                  <tr key={itemIdx} className="feature-row">
-                    <td className="feature-column">
-                      <div className="feature-name-wrapper">
+                  <tr key={itemIdx} className="feature-row animate-on-scroll fade-up">
+                    <td className="feature-column animate-on-scroll fade-up">
+                      <div className="feature-name-wrapper animate-on-scroll fade-up">
                         <span>{item.name}</span>
                         <div className="tooltip-container" title={item.tooltip}>
                           <Info size={14} className="info-icon" />

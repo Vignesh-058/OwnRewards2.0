@@ -1,0 +1,41 @@
+.integration-strip {
+  background: transparent;
+  padding: 40px 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.is-title {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.is-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.is-badge {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.is-dot {
+  color: var(--border);
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .is-items {
+    gap: 12px;
+  }
+  .is-badge {
+    font-size: 0.9rem;
+  }
+}

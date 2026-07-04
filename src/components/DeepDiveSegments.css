@@ -1,0 +1,68 @@
+.dd-segments-section {
+  background: var(--text); /* dark surface */
+  color: #fff;
+  padding: 100px 0;
+}
+
+.dd-seg-title {
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 64px;
+  letter-spacing: -0.02em;
+}
+
+.dd-seg-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.dd-seg-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 32px;
+  border-radius: 16px;
+  flex: 1;
+  text-align: left;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.dd-seg-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dd-seg-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 12px;
+}
+
+.dd-seg-card-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dd-seg-link {
+  display: inline-flex;
+  font-weight: 700;
+  color: var(--primary-light);
+  font-size: 1.1rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.dd-seg-link:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+@media (min-width: 768px) {
+  .dd-seg-cards {
+    flex-direction: row;
+  }
+}

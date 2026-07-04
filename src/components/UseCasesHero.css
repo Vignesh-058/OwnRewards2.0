@@ -1,0 +1,39 @@
+.uc-hero-section {
+  position: relative;
+  padding: 100px 0 60px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.uc-hero-title {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.uc-hero-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.uc-hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .uc-hero-section {
+    padding: 60px 0 40px;
+  }
+}

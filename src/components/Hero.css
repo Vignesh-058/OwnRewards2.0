@@ -5,7 +5,7 @@
   align-items: center;
   padding-top: 80px; /* Offset for navbar */
   overflow: hidden;
-  background: var(--background);
+  background: transparent;
 }
 
 .hero-background {
@@ -311,51 +311,88 @@
   border-radius: 2px;
 }
 
-@media (max-width: 992px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-  
-  .hero-content {
-    margin: 0 auto;
-  }
-  
-  .hero-actions {
-    justify-content: center;
-  }
-  
-  .hero-illustration {
-    height: 400px;
-  }
-  
-  .hero-illustration .dashboard-main {
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-  
-  .floating-widget {
-    display: none; /* Hide complex floating on smaller screens */
-  }
+/* Mobile base — single column, no illustration */
+.hero-container {
+  grid-template-columns: 1fr;
+  text-align: center;
+  gap: 32px;
 }
 
-@media (max-width: 768px) {
-  .hero-actions {
-    flex-direction: column;
-  }
+.hero-content {
+  margin: 0 auto;
+}
+
+.hero-actions {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-illustration {
+  height: 260px;
+}
+
+.hero-illustration .dashboard-main {
+  transform: translate(-50%, -50%) scale(0.45);
+}
+
+.floating-widget {
+  display: none;
+}
+
+/* 480px — small phones */
+@media (min-width: 480px) {
   .hero-illustration {
     height: 300px;
   }
   .hero-illustration .dashboard-main {
-    transform: translate(-50%, -50%) scale(0.6);
+    transform: translate(-50%, -50%) scale(0.55);
   }
 }
 
-@media (max-width: 576px) {
+/* 768px — tablets: side by side layout */
+@media (min-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 48px;
+  }
+  .hero-content {
+    margin: 0;
+  }
+  .hero-actions {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
   .hero-illustration {
-    height: 250px;
+    height: 420px;
   }
   .hero-illustration .dashboard-main {
-    transform: translate(-50%, -50%) scale(0.45);
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  .floating-widget {
+    display: block;
+  }
+}
+
+/* 1024px — laptops */
+@media (min-width: 1024px) {
+  .hero-container {
+    gap: 60px;
+  }
+  .hero-illustration {
+    height: 520px;
+  }
+  .hero-illustration .dashboard-main {
+    transform: translate(-50%, -50%) rotateY(-10deg) rotateX(5deg) scale(0.9);
+  }
+}
+
+/* 1280px — wide desktops */
+@media (min-width: 1280px) {
+  .hero-illustration {
+    height: 600px;
+  }
+  .hero-illustration .dashboard-main {
+    transform: translate(-50%, -50%) rotateY(-10deg) rotateX(5deg);
   }
 }

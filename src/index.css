@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import './animations.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* Core Colors */
@@ -98,6 +99,10 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: var(--background);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(111, 77, 230, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08), transparent 25%);
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -106,12 +111,18 @@ body {
   overflow-x: hidden;
 }
 
+[data-theme='dark'] body {
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(111, 77, 230, 0.15), transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.12), transparent 30%);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border);
@@ -349,28 +360,94 @@ label {
   box-shadow: var(--shadow-lg);
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+/* ================================================
+   RESPONSIVE — Mobile First
+   4 breakpoints: 480 | 768 | 1024 | 1280
+   ================================================ */
+
+/* Base (< 480px) — smallest phones */
+:root {
+  --section-spacing: 56px;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.bento-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 { font-size: clamp(1.9rem, 9vw, 2.6rem); }
+h2 { font-size: clamp(1.6rem, 7vw, 2.1rem); }
+h3 { font-size: clamp(1.2rem, 5vw, 1.5rem); }
+
+.section-header {
+  margin: 0 auto 28px;
+}
+
+/* 480px — small phones */
+@media (min-width: 480px) {
+  :root {
+    --section-spacing: 64px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+  h2 { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+}
+
+/* 768px — tablets */
+@media (min-width: 768px) {
+  :root {
+    --section-spacing: 80px;
+  }
+  .container {
+    padding: 0 32px;
+  }
   .bento-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+  h1 { font-size: clamp(2.4rem, 5vw, 3.2rem); letter-spacing: -0.03em; }
+  h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+  h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+  .section-header {
+    margin: 0 auto 40px;
   }
 }
 
-@media (max-width: 768px) {
+/* 1024px — laptops */
+@media (min-width: 1024px) {
   :root {
-    --section-spacing: 60px;
+    --section-spacing: 100px;
   }
-  
   .container {
-    padding: 0 16px;
+    padding: 0 40px;
   }
-
-  h1 { font-size: clamp(2rem, 8vw, 3rem); }
-  h2 { font-size: clamp(1.75rem, 6vw, 2.25rem); }
-  h3 { font-size: clamp(1.25rem, 5vw, 1.75rem); }
-  
+  h1 { font-size: clamp(2.8rem, 4.5vw, 3.8rem); }
+  h2 { font-size: clamp(2.2rem, 3.5vw, 2.9rem); }
+  h3 { font-size: clamp(1.6rem, 2.5vw, 2rem); }
   .section-header {
-    margin: 0 auto 32px;
+    margin: 0 auto 48px;
+  }
+}
+
+/* 1280px — wide desktops */
+@media (min-width: 1280px) {
+  :root {
+    --section-spacing: 120px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  h1 { font-size: clamp(3rem, 4vw, 4rem); }
+  h2 { font-size: clamp(2.4rem, 3vw, 3rem); }
+  h3 { font-size: clamp(1.7rem, 2vw, 2rem); }
+  .section-header {
+    margin: 0 auto 56px;
   }
 }

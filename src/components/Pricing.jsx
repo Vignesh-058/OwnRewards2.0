@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Check } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Check, ArrowRight } from 'lucide-react';
 import Button from './Button';
 import './Pricing.css';
 
@@ -13,12 +12,15 @@ const Pricing = () => {
       name: "Starter",
       priceMonthly: 49,
       priceAnnual: 39,
-      description: "Perfect for small businesses just getting started.",
+      description: "Perfect for small businesses launching their first loyalty program.",
       features: [
         "Up to 2,000 active members",
-        "Basic points program",
-        "Standard rewards catalog",
-        "Email support"
+        "Bronze & Silver loyalty tiers",
+        "Basic points engine (1 rule)",
+        "10 event triggers",
+        "Percentage & flat rewards",
+        "Email notifications",
+        "Standard analytics dashboard",
       ],
       highlighted: false,
       cta: "Starter Plan"
@@ -27,14 +29,17 @@ const Pricing = () => {
       name: "Growth",
       priceMonthly: 149,
       priceAnnual: 119,
-      description: "Everything you need to scale your retention strategy.",
+      description: "Everything you need to scale retention with the full OwnRewards platform.",
       features: [
         "Up to 10,000 active members",
-        "Advanced rule engine",
-        "Referral programs",
-        "WhatsApp integration",
-        "Custom branding",
-        "Priority support"
+        "All 4 tiers: Bronze → Platinum",
+        "Full Rule Engine (30+ triggers)",
+        "All 5 reward & coupon types",
+        "Dual-sided referral programs",
+        "7 campaign types + A/B testing",
+        "Omnichannel: Email, SMS, WhatsApp",
+        "Cohort retention & ROI analytics",
+        "Priority support",
       ],
       highlighted: true,
       cta: "Growth Plan"
@@ -43,92 +48,86 @@ const Pricing = () => {
       name: "Enterprise",
       priceMonthly: "Custom",
       priceAnnual: "Custom",
-      description: "For high-volume merchants with complex needs.",
+      description: "For high-volume merchants with complex, custom loyalty needs.",
       features: [
         "Unlimited members",
-        "Custom integrations",
+        "Custom tier structures & rules",
+        "LTV prediction & product intelligence",
+        "4 referral program types",
+        "Custom POS & ERP integrations",
         "Dedicated success manager",
-        "SLA guarantee",
-        "Custom POS integration",
-        "API access"
+        "SLA guarantee (99.9% uptime)",
+        "Full API access",
       ],
       highlighted: false,
       cta: "Contact Sales"
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } }
-  };
-
+  
+  
   return (
-    <section className="pricing relative overflow-hidden" id="pricing">
+    <section id="pricing-sec-1" className="pricing relative overflow-hidden animate-on-scroll fade-up" id="pricing">
       <div className="container relative z-10">
         <div className="section-header text-center mb-12">
-          <h2 className="section-title">Simple, transparent <span className="gradient-text">pricing</span></h2>
-          <p className="section-subtitle mt-4">No hidden fees. Scale your plan as your business grows.</p>
+          <h2 className="section-title animate-on-scroll fade-up">Simple, transparent <span className="gradient-text">pricing</span></h2>
+          <p className="section-subtitle mt-4">All 6 OwnRewards pillars included from day one. Scale your plan as your business grows.</p>
         </div>
 
-        {/* Toggle Switch */}
-        <div className="flex justify-center items-center gap-4 mb-16">
-          <span className={`text-sm font-semibold transition-colors ${!isAnnual ? 'text-primary' : 'text-secondary'}`}>Monthly</span>
-          <div 
-            className="w-16 h-8 bg-surface border border-border rounded-full p-1 cursor-pointer flex items-center relative"
-            onClick={() => setIsAnnual(!isAnnual)}
-          >
-            <motion.div 
-              className="w-6 h-6 bg-primary rounded-full shadow-md"
-              animate={{ x: isAnnual ? 32 : 0 }}
-              transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+        {/* Segmented Toggle Switch */}
+        <div className="flex justify-center mb-16">
+          <div className="toggle-segmented-container">
+            <div 
+              className="toggle-active-bg"
+              
+              
             />
+            
+            <button id="pricing-btn-2" 
+              className={`toggle-btn ${!isAnnual ? 'active' : ''}`}
+              onClick={() => setIsAnnual(false)}
+            >
+              Monthly
+            </button>
+            <button id="pricing-btn-3" 
+              className={`toggle-btn ${isAnnual ? 'active' : ''}`}
+              onClick={() => setIsAnnual(true)}
+            >
+              Annually <span className="toggle-badge">Save 20%</span>
+            </button>
           </div>
-          <span className={`text-sm font-semibold transition-colors flex items-center gap-2 ${isAnnual ? 'text-primary' : 'text-secondary'}`}>
-            Annually <span className="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full">Save 20%</span>
-          </span>
         </div>
 
-        <motion.div 
-          className="pricing-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+        <div 
+          className="pricing-grid animate-on-scroll fade-up"
+          
         >
           {plans.map((plan, index) => (
-            <motion.div key={index} className={`pricing-card hover-lift ${plan.highlighted ? 'highlighted' : ''}`} variants={cardVariants}>
+            <div key={index} className={`pricing-card hover-lift ${plan.highlighted ? 'highlighted' : ''}`}>
               {plan.highlighted && <div className="popular-badge">Most Popular</div>}
               
-              <div className="pricing-header">
+              <div className="pricing-header animate-on-scroll fade-up">
                 <h3 className="plan-name">{plan.name}</h3>
                 <p className="plan-description">{plan.description}</p>
                 <div className="plan-price">
                   <AnimatePresence mode="wait">
-                    <motion.span 
+                    <span 
                       key={isAnnual ? 'annual' : 'monthly'}
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
+                      
+                      
+                      
+                      
                       className="price-amount" 
                       style={{ fontSize: plan.priceMonthly === 'Custom' ? '2.2rem' : '3rem' }}
                     >
                       {plan.priceMonthly === 'Custom' ? 'Custom' : `$${isAnnual ? plan.priceAnnual : plan.priceMonthly}`}
-                    </motion.span>
+                    </span>
                   </AnimatePresence>
                   {plan.priceMonthly !== "Custom" && <span className="price-period">/mo</span>}
                 </div>
               </div>
               
-              <div className="pricing-features">
+              <div className="pricing-features animate-on-scroll fade-up">
                 <ul>
                   {plan.features.map((feature, idx) => (
                     <li key={idx}>
@@ -139,27 +138,27 @@ const Pricing = () => {
                 </ul>
               </div>
               
-              <div className="pricing-footer mt-auto pt-6 border-t border-border/50">
+              <div className="pricing-footer mt-auto pt-6 border-t border-border/50 animate-on-scroll fade-up">
                 {plan.cta === "Contact Sales" ? (
                   <a href="#contact" onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                   }} style={{ textDecoration: 'none', display: 'block', width: '100%' }}>
-                    <Button variant={plan.highlighted ? 'primary' : 'outline'} className="w-full">
+                    <Button variant="custom" className={`w-full pricing-btn ${plan.highlighted ? 'pricing-btn-primary' : 'pricing-btn-outline'}`} rightIcon={<ArrowRight size={18} />}>
                       {plan.cta}
                     </Button>
                   </a>
                 ) : (
                   <Link to="/register" style={{ textDecoration: 'none', display: 'block', width: '100%' }}>
-                    <Button variant={plan.highlighted ? 'primary' : 'outline'} className="w-full">
+                    <Button variant="custom" className={`w-full pricing-btn ${plan.highlighted ? 'pricing-btn-primary' : 'pricing-btn-outline'}`} rightIcon={<ArrowRight size={18} />}>
                       {plan.cta}
                     </Button>
                   </Link>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
       {/* Decorative Glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-magenta opacity-10 blur-[150px] rounded-full pointer-events-none -z-10" />

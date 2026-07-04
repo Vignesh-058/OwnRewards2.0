@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import GlassCard from './GlassCard';
 import './Testimonials.css';
 
@@ -43,20 +42,17 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="testimonials relative overflow-hidden">
+    <section id="testimonials-sec-1" className="testimonials relative overflow-hidden">
       <div className="container relative z-10">
-        <h2 className="section-title text-center mb-8">Loved by <span className="gradient-text">thousands</span></h2>
+        <h2 className="section-title text-center mb-8 animate-on-scroll fade-up">Loved by <span className="gradient-text">thousands</span></h2>
         
         <div className="carousel-container max-w-4xl mx-auto relative mt-12">
-          <AnimatePresence mode="wait">
-            <motion.div
+          <div className="carousel-content">
+            <div
               key={currentIndex}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}
+              className="testimonial-fade-wrapper"
             >
-              <GlassCard className="testimonial-card">
+              <GlassCard className="testimonial-card animate-on-scroll fade-up">
                 <div className="rating">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                     <Star key={i} size={20} fill="var(--primary)" color="var(--primary)" />
@@ -64,24 +60,31 @@ const Testimonials = () => {
                 </div>
                 <p className="testimonial-content">"{testimonials[currentIndex].content}"</p>
                 <div className="testimonial-author">
-                  <img src={testimonials[currentIndex].avatar} alt={testimonials[currentIndex].name} className="author-avatar" />
+                  <div className="author-avatar-css" style={{ 
+                    width: '48px', height: '48px', borderRadius: '50%', 
+                    background: 'var(--primary)', color: 'white', 
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 'bold', fontSize: '1.2rem'
+                  }}>
+                    {testimonials[currentIndex].name.charAt(0)}
+                  </div>
                   <div className="author-info">
                     <div className="author-name">{testimonials[currentIndex].name}</div>
                     <div className="author-role">{testimonials[currentIndex].role}, {testimonials[currentIndex].company}</div>
                   </div>
                 </div>
               </GlassCard>
-            </motion.div>
-          </AnimatePresence>
+            </div>
+          </div>
           
           <div className="carousel-controls mt-8 flex justify-center gap-4">
-            <button onClick={prev} className="btn-icon carousel-btn hover-lift"><ChevronLeft size={24} /></button>
+            <button id="testimonials-btn-2" onClick={prev} className="btn-icon carousel-btn hover-lift"><ChevronLeft size={24} /></button>
             <div className="flex gap-2 items-center">
               {testimonials.map((_, i) => (
                 <div key={i} className={`dot-indicator ${i === currentIndex ? 'active' : ''}`} />
               ))}
             </div>
-            <button onClick={next} className="btn-icon carousel-btn hover-lift"><ChevronRight size={24} /></button>
+            <button id="testimonials-btn-3" onClick={next} className="btn-icon carousel-btn hover-lift"><ChevronRight size={24} /></button>
           </div>
         </div>
       </div>

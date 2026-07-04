@@ -1,26 +1,19 @@
 import React from 'react';
-import AboutHero from '../components/about/AboutHero';
-import CompanyStory from '../components/about/CompanyStory';
-import MissionVision from '../components/about/MissionVision';
-import CoreValues from '../components/about/CoreValues';
-import Timeline from '../components/about/Timeline';
-import WhyChoose from '../components/WhyChoose';
-import Testimonials from '../components/Testimonials';
-import AnimatedSection from '../components/AnimatedSection';
-import './AboutPage.css';
-
+import SEO from '../components/SEO';
+import AboutHero from '../components/AboutHero';
+import AboutValues from '../components/AboutValues';
+import AboutCTA from '../components/AboutCTA';
 const AboutPage = () => {
   return (
     <>
+      <SEO 
+        title="About ownRewards — Built by iEyal Solutions"
+        description="Learn how ownRewards was built from real restaurant and retail frustrations — and why it's the only loyalty platform growing businesses need."
+        path="about.html"
+      />
       <AboutHero />
-      <CompanyStory />
-      <MissionVision />
-      <Timeline />
-      <CoreValues />
-      <div className="about-why-choose">
-        <AnimatedSection><WhyChoose /></AnimatedSection>
-      </div>
-      <AnimatedSection><Testimonials /></AnimatedSection>
+      <AboutValues />
+      <AboutCTA />
     </>
   );
 };

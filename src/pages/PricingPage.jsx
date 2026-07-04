@@ -1,12 +1,25 @@
 import React from 'react';
-import Pricing from '../components/Pricing';
-import AnimatedSection from '../components/AnimatedSection';
+import SEO from '../components/SEO';
+import PricingHero from '../components/PricingHero';
+import PricingCards from '../components/PricingCards';
+import PricingCompare from '../components/PricingCompare';
+import PricingFAQ from '../components/PricingFAQ';
+import FinalCTA from '../components/FinalCTA';
 
 const PricingPage = () => {
   return (
-    <AnimatedSection animation="animate-scale-in">
-      <Pricing />
-    </AnimatedSection>
+    <>
+      <SEO 
+        title="ownRewards Pricing — Loyalty Plans That Scale With Your Business"
+        description="Start free with core loyalty features. Scale to advanced rules, referrals, and analytics as your customer base grows."
+        path="pricing.html"
+      />
+      <PricingHero />
+      <PricingCards />
+      <PricingCompare />
+      <PricingFAQ />
+      <FinalCTA />
+    </>
   );
 };
 

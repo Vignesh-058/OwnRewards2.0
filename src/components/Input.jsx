@@ -44,7 +44,7 @@ const Input = React.forwardRef(({
         />
         
         {isPassword ? (
-          <button
+          <button id="input-btn-1"
             type="button"
             className="input-password-toggle"
             onClick={() => setShowPassword(!showPassword)}

@@ -10,9 +10,9 @@ const TrustedCompanies = () => {
   const marqueeContent = [...companies, ...companies, ...companies];
 
   return (
-    <section className="trusted-companies">
+    <section id="trustedcompanies-sec-1" className="trusted-companies">
       <div className="container">
-        <p className="trusted-title">Trusted by growing businesses</p>
+        <p className="trusted-title">Trusted by restaurant chains, retail brands, D2C stores & IT teams</p>
         
         <div className="marquee-container">
           <div className="marquee-content">

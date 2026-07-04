@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, ArrowRight } from 'lucide-react';
 import { clsx } from 'clsx';
-import Button from './Button';
 import Logo from './Logo';
 import './Navbar.css';
 
@@ -35,26 +34,27 @@ const Navbar = () => {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
     { name: 'Features', path: '/features' },
+    { name: 'How It Works', path: '/how-it-works' },
+    { name: 'Use Cases', path: '/use-cases' },
+    { name: 'Analytics', path: '/analytics' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
   ];
 
   return (
     <>
       <nav className={clsx('navbar', scrolled && 'navbar-scrolled')}>
         <div className="container navbar-container">
-          <Link to="/" className="navbar-logo">
+          <Link to="/" className="navbar-logo" style={{ textDecoration: 'none' }}>
             <Logo size={32} />
           </Link>
-          
+
           <div className="navbar-desktop-links">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                to={link.path} 
+              <Link
+                key={link.name}
+                to={link.path}
                 className={clsx('nav-link', location.pathname === link.path && 'active')}
               >
                 {link.name}
@@ -63,23 +63,24 @@ const Navbar = () => {
           </div>
 
           <div className="navbar-actions">
-            <button 
-              onClick={toggleTheme} 
+            <button id="navbar-btn-1"
+              onClick={toggleTheme}
               className="theme-toggle-btn"
               style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text)', padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               aria-label="Toggle theme"
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
-            <Link to="/login" className="hidden-mobile">
-              <Button variant="ghost">Log in</Button>
+
+            {/* Single primary CTA */}
+            <Link to="/register" className="hidden-mobile" style={{ textDecoration: 'none' }}>
+              <button id="navbar-btn-2" className="navbar-cta-btn">
+                Start Free <ArrowRight size={15} style={{ marginLeft: '4px', verticalAlign: 'middle' }} />
+              </button>
             </Link>
-            <Link to="/register">
-              <Button variant="primary">Get Started</Button>
-            </Link>
-            
-            <button 
-              className="mobile-menu-toggle" 
+
+            <button id="navbar-btn-3"
+              className="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open Menu"
             >
@@ -95,19 +96,19 @@ const Navbar = () => {
         <div className="mobile-drawer-header">
           <Logo size={28} />
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-            <button onClick={toggleTheme} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text)', display: 'flex', alignItems: 'center' }}>
+            <button id="navbar-btn-4" onClick={toggleTheme} style={{ background: 'transparent', border: 'none', cursor: 'pointer', color: 'var(--text)', display: 'flex', alignItems: 'center' }}>
               {theme === 'light' ? <Moon size={24} /> : <Sun size={24} />}
             </button>
-            <button onClick={() => setMobileMenuOpen(false)} className="close-drawer">
+            <button id="navbar-btn-5" onClick={() => setMobileMenuOpen(false)} className="close-drawer">
               <X size={24} />
             </button>
           </div>
         </div>
         <div className="mobile-drawer-links">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path} 
+            <Link
+              key={link.name}
+              to={link.path}
               className={clsx('mobile-link', location.pathname === link.path && 'active')}
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -115,8 +116,15 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="mobile-drawer-divider" />
-          <Link to="/login" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Log in</Link>
-          <Link to="/contact" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>Contact Support</Link>
+          <Link
+            to="/register"
+            onClick={() => setMobileMenuOpen(false)}
+            style={{ textDecoration: 'none' }}
+          >
+            <button id="navbar-btn-6" className="navbar-cta-btn" style={{ width: '100%', justifyContent: 'center' }}>
+              Get Started Free <ArrowRight size={15} style={{ marginLeft: '4px' }} />
+            </button>
+          </Link>
         </div>
       </div>
     </>

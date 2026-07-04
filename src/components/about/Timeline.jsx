@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Timeline = () => {
   const milestones = [
@@ -36,10 +35,10 @@ const Timeline = () => {
   ];
 
   return (
-    <section className="timeline-section relative overflow-hidden bg-surface-hover">
+    <section id="timeline-sec-1" className="timeline-section relative overflow-hidden bg-surface-hover">
       <div className="container relative z-10">
         <div className="section-header text-center mb-16">
-          <h2 className="section-title">Our <span className="gradient-text">Journey</span></h2>
+          <h2 className="section-title animate-on-scroll fade-up">Our <span className="gradient-text">Journey</span></h2>
           <p className="section-subtitle mt-4">A brief history of how we got here and where we are heading.</p>
         </div>
 
@@ -47,13 +46,13 @@ const Timeline = () => {
           <div className="timeline-line"></div>
           
           {milestones.map((milestone, index) => (
-            <motion.div 
+            <div 
               key={index} 
               className="timeline-item"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              
+              
+              
+              
             >
               <div className="timeline-dot"></div>
               <div className="timeline-content hover-lift">
@@ -61,7 +60,7 @@ const Timeline = () => {
                 <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
                 <p className="text-secondary">{milestone.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

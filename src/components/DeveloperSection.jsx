@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Terminal } from 'lucide-react';
-import { motion } from 'framer-motion';
 import './DeveloperSection.css';
 import Button from './Button';
 
@@ -45,18 +44,18 @@ const DeveloperSection = () => {
   }, []);
 
   return (
-    <section className="developer-section" id="developers">
+    <section id="developersection-sec-1" className="developer-section" id="developers">
       <div className="container">
-        <div className="dev-grid">
+        <div className="dev-grid animate-on-scroll fade-up">
           <div className="dev-content">
             <div className="badge-dev">
               <Terminal size={14} /> Developer
             </div>
-            <h2 className="section-title">API First Architecture</h2>
+            <h2 className="section-title animate-on-scroll fade-up">API First Architecture</h2>
             <p className="section-subtitle">
               Integrate OwnRewards into your custom stack in minutes. Our RESTful APIs and webhooks give you complete control over the loyalty experience.
             </p>
-            <ul className="dev-features">
+            <ul className="dev-features animate-on-scroll fade-up">
               <li>Comprehensive API Documentation</li>
               <li>Real-time Webhooks</li>
               <li>SDKs for Node.js, Python, and Ruby</li>
@@ -67,11 +66,11 @@ const DeveloperSection = () => {
           </div>
 
           <div className="dev-window-wrapper">
-            <motion.div 
+            <div 
               className="code-window"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              
+              
+              
             >
               <div className="window-header">
                 <div className="window-dots">
@@ -89,7 +88,7 @@ const DeveloperSection = () => {
                   </code>
                 </pre>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

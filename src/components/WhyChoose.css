@@ -1,5 +1,5 @@
 .why-choose {
-  background: var(--background);
+  background: transparent;
 }
 
 .bento-span-3 { grid-column: span 3; }

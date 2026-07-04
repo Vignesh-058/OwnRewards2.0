@@ -1,39 +1,38 @@
 import React from 'react';
 import { Mail, MapPin, Phone, Clock, MessageCircle, Briefcase, Globe } from 'lucide-react';
-import { motion } from 'framer-motion';
 import Button from './Button';
 import GlassCard from './GlassCard';
 import './Contact.css';
 
 const Contact = () => {
   return (
-    <section className="contact pt-32 pb-16" id="contact">
+    <section id="contact-sec-1" className="contact pt-32 pb-16" id="contact">
       <div className="container relative z-10">
         <div className="section-header text-center mb-16">
-          <motion.h1 
+          <h1 
             className="text-4xl md:text-5xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            
+            
+            
           >
             Get in <span className="gradient-text">Touch</span>
-          </motion.h1>
-          <motion.p 
+          </h1>
+          <p 
             className="section-subtitle mt-4 mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            
+            
+            
           >
             Have questions about our enterprise plans, API integrations, or custom development? Our team is here to help.
-          </motion.p>
+          </p>
         </div>
 
-        <div className="contact-grid">
-          <motion.div 
+        <div className="contact-grid animate-on-scroll fade-up">
+          <div 
             className="contact-info-wrapper"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            
+            
+            
           >
             <div className="contact-methods">
               <GlassCard className="contact-method">
@@ -88,13 +87,13 @@ const Contact = () => {
                 <a href="#" className="social-icon-btn"><Globe size={20} /></a>
               </div>
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div 
+          <div 
             className="contact-form-wrapper"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            
+            
+            
           >
             <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
               <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
@@ -128,7 +127,7 @@ const Contact = () => {
               </div>
               <Button type="submit" variant="primary" className="w-full mt-4">Send Message</Button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
       

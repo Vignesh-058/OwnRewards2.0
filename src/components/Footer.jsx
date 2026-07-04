@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="footer-brand">
             <Logo size={28} />
             <p className="footer-description">
-              The enterprise-grade customer loyalty and rewards platform built to scale your business and retain your best customers.
+              The intelligent loyalty and retention platform for growing businesses — combining points, rewards, coupons, referrals, and AI-driven rules in one engine.
             </p>
             <div className="footer-social mt-6">
               <a href="#" className="social-link" aria-label="Twitter"><MessageCircle size={18} /></a>
@@ -36,6 +36,14 @@ const Footer = () => {
             <Link to="/about">API Reference</Link>
             <Link to="/about">Blog</Link>
             <Link to="/about">Community</Link>
+          </div>
+
+          <div className="footer-links-group">
+            <h4 className="footer-title">Ecosystem</h4>
+            <Link to="/features">ownPOS</Link>
+            <Link to="/features">ownPay</Link>
+            <Link to="/analytics">ownAnalytics</Link>
+            <Link to="/features">ownChat</Link>
           </div>
 
           <div className="footer-links-group">

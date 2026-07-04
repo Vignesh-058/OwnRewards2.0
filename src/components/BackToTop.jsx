@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,20 +24,17 @@ const BackToTop = () => {
   };
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, y: 20, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.8 }}
+        <button id="backtotop-btn-1"
           onClick={scrollToTop}
-          className="back-to-top glass-panel hover-lift"
+          className="back-to-top glass-panel hover-lift animate-on-scroll fade-up is-visible"
           aria-label="Back to top"
         >
           <ArrowUp size={20} />
-        </motion.button>
+        </button>
       )}
-    </AnimatePresence>
+    </>
   );
 };
 

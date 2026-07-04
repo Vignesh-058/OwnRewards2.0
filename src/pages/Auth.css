@@ -1,7 +1,7 @@
 .auth-page {
   min-height: 100vh;
   display: flex;
-  background: var(--background);
+  background: transparent;
 }
 
 .auth-split {
@@ -92,7 +92,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px;
-  background: var(--background);
+  background: transparent;
 }
 
 .auth-card {
@@ -164,7 +164,7 @@
   padding: 12px 16px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: var(--background);
+  background: transparent;
   font-size: 0.95rem;
   color: var(--text);
   font-family: inherit;

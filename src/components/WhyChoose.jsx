@@ -1,6 +1,5 @@
 import React from 'react';
 import { Settings, Infinity as InfinityIcon, MessageSquare, BarChart2, Zap, ShieldCheck } from 'lucide-react';
-import { motion } from 'framer-motion';
 import GlassCard from './GlassCard';
 import './WhyChoose.css';
 
@@ -44,37 +43,23 @@ const WhyChoose = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 100 } }
-  };
-
+  
+  
   return (
-    <section className="why-choose relative overflow-hidden">
+    <section id="whychoose-sec-1" className="why-choose relative overflow-hidden">
       <div className="container relative z-10">
         <div className="section-header text-center mb-8">
-          <h2 className="section-title">Why choose <span className="text-primary">OwnRewards?</span></h2>
+          <h2 className="section-title animate-on-scroll fade-up">Why choose <span className="text-primary">OwnRewards?</span></h2>
           <p className="section-subtitle">The most comprehensive loyalty platform built specifically for modern businesses.</p>
         </div>
 
-        <motion.div 
-          className="bento-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+        <div 
+          className="bento-grid animate-on-scroll fade-up"
+          
         >
           {reasons.map((reason, index) => (
-            <motion.div key={index} className={reason.className} variants={itemVariants}>
-              <GlassCard className="reason-card hover-lift">
+            <div key={index} className={reason.className}>
+              <GlassCard className="reason-card hover-lift animate-on-scroll fade-up">
                 <div>
                   <div className="reason-icon">
                     {reason.icon}
@@ -83,9 +68,9 @@ const WhyChoose = () => {
                   <p className="reason-description">{reason.description}</p>
                 </div>
               </GlassCard>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
       
       {/* Decorative Blur */}

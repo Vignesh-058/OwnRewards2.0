@@ -1,25 +1,30 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import TrustedCompanies from '../components/TrustedCompanies';
-import Metrics from '../components/Metrics';
-import ProductShowcase from '../components/ProductShowcase';
-import HowItWorks from '../components/HowItWorks';
-import DeveloperSection from '../components/DeveloperSection';
-import FAQ from '../components/FAQ';
-import FinalCTA from '../components/FinalCTA';
-import AnimatedSection from '../components/AnimatedSection';
+import SEO from '../components/SEO';
+import HomeHero from '../components/HomeHero';
+import StatsStrip from '../components/StatsStrip';
+import Differentiators from '../components/Differentiators';
+import FeatureTabs from '../components/FeatureTabs';
+import HowItWorksPreview from '../components/HowItWorksPreview';
+import HomeTestimonials from '../components/HomeTestimonials';
+import IntegrationStrip from '../components/IntegrationStrip';
+import CTABanner from '../components/CTABanner';
 
 const Home = () => {
   return (
     <>
-      <AnimatedSection animation="animate-fade-in"><Hero /></AnimatedSection>
-      <AnimatedSection delay={200}><TrustedCompanies /></AnimatedSection>
-      <AnimatedSection><Metrics /></AnimatedSection>
-      <AnimatedSection><ProductShowcase /></AnimatedSection>
-      <AnimatedSection animation="animate-slide-right"><HowItWorks /></AnimatedSection>
-      <AnimatedSection animation="animate-scale-in"><DeveloperSection /></AnimatedSection>
-      <AnimatedSection><FAQ /></AnimatedSection>
-      <AnimatedSection><FinalCTA /></AnimatedSection>
+      <SEO 
+        title="ownRewards — Smart Loyalty & Retention Platform for Growing Businesses"
+        description="Build a loyalty program that actually drives repeat business. Points, rewards, coupons, referrals, and automated rules — all in one intelligent platform."
+        path="index.html"
+      />
+      <HomeHero />
+      <StatsStrip />
+      <Differentiators />
+      <FeatureTabs />
+      <HowItWorksPreview />
+      <HomeTestimonials />
+      <IntegrationStrip />
+      <CTABanner />
     </>
   );
 };

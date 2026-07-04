@@ -1,0 +1,91 @@
+.about-eco-section {
+  padding: 80px 0;
+  background: transparent;
+}
+
+.ae-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ae-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ae-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ae-highlight {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.03);
+}
+
+.ae-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.ae-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.ae-body {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ae-spacer {
+  flex: 1;
+  min-height: 24px;
+}
+
+.ae-status {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ae-connected {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.ae-here {
+  background: #f59e0b;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.ae-available {
+  background: var(--surface-hover);
+  color: var(--text-tertiary);
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .ae-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

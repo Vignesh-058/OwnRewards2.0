@@ -118,7 +118,7 @@
   gap: 16px;
   padding: 16px;
   border-radius: 12px;
-  background: var(--background);
+  background: transparent;
 }
 
 .workflow-step.highlight {

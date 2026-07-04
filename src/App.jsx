@@ -12,6 +12,9 @@ import FeaturesPage from './pages/FeaturesPage';
 import PricingPage from './pages/PricingPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import HowItWorksPage from './pages/HowItWorksPage';
+import UseCasesPage from './pages/UseCasesPage';
+import AnalyticsPage from './pages/AnalyticsPage';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
             <Route path="pricing" element={<PricingPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="how-it-works" element={<HowItWorksPage />} />
+            <Route path="use-cases" element={<UseCasesPage />} />
+            <Route path="analytics" element={<AnalyticsPage />} />
           </Route>
           
           <Route path="/login" element={<Login />} />
