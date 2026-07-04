@@ -214,3 +214,88 @@
 .ft-metric-val { font-size: 2rem; font-weight: 900; color: var(--text); margin-top: 8px; }
 .ft-metric-trend { font-size: 0.85rem; font-weight: 600; margin-top: 4px; }
 .ft-metric-trend.positive { color: #10b981; }
+
+/* ── NEW MOCK STYLES ── */
+
+.ft-reward-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.ft-reward-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.ft-rule-footer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-light);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-family: monospace;
+  text-align: center;
+}
+
+.ft-cohort-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.ft-cohort-th {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.ft-cohort-th:first-child { text-align: left; }
+
+.ft-cohort-td {
+  padding: 10px 8px;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.ft-cohort-td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.ft-cohort-cell {
+  display: inline-block;
+  width: 44px;
+  padding: 4px 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ft-cohort-empty {
+  color: var(--text-tertiary);
+}
+
+.bg-green { background: #10b981; }
+.bg-amber { background: #f59e0b; }
+.bg-red { background: #ef4444; }
+
+.tab-animate-in {
+  animation: tabFadeIn 0.4s ease-out forwards;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

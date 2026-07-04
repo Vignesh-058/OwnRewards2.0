@@ -24,14 +24,9 @@ const HomeHero = () => {
             <div className="hero-eyebrow">✨ AI-Powered Customer Retention</div>
           </div>
 
-          <h1
-            className="home-hero-h1"
-            
-            
-            
-          >
-            <span style={{ whiteSpace: 'nowrap' }}>Stop losing customers.</span><br />
-            <span style={{ whiteSpace: 'nowrap' }}>Start rewarding loyalty.</span>
+          <h1 className="home-hero-h1 animate-on-scroll fade-up">
+            <span>Stop losing customers.</span><br />
+            <span>Start rewarding loyalty.</span>
           </h1>
 
           <p
