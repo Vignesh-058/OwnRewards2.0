@@ -1,5 +1,5 @@
 .dd-segments-section {
-  background: var(--text); /* dark surface */
+  background: #09090b; /* fixed dark surface */
   color: #fff;
   padding: 100px 0;
 }
