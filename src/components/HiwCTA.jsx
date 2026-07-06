@@ -9,9 +9,9 @@ const HiwCTA = () => {
         <div className="cta-banner-wrapper">
           <div className="cta-content">
             <h2 className="cta-headline">Ready to automate your loyalty program?</h2>
-            <Link to="/register" className="cta-btn-white" style={{ marginTop: '24px' }}>
+            <a href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer" className="cta-btn-white" style={{ marginTop: '24px' }}>
               Get Started Free →
-            </Link>
+            </a>
           </div>
         </div>
       </div>

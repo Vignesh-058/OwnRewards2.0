@@ -32,9 +32,9 @@ const HomeHero = () => {
           </p>
 
           <div className="home-hero-actions animate-on-scroll fade-up delay-300">
-            <Link to="/register" className="hero-btn-primary hover-glow">
+            <a href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer" className="hero-btn-primary hover-glow">
               Get Started Free <ArrowRight size={16} />
-            </Link>
+            </a>
             <Link to="/how-it-works" className="hero-btn-outline hover-glow">
               See How It Works
             </Link>

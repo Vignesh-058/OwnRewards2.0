@@ -10,9 +10,9 @@ const CTABanner = () => {
           <div className="cta-content">
             <h2 className="cta-headline">Your best customers deserve better than a paper stamp card.</h2>
             <p className="cta-sub">Set up OwnRewards in minutes. No dev team needed. No complex migrations.</p>
-            <Link to="/register" className="cta-btn-white" style={{ marginTop: '24px' }}>
-              Start Free — No Credit Card Required
-            </Link>
+            <a href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer" className="cta-btn-white" style={{ marginTop: '24px' }}>
+              Get Started Free →
+            </a>
           </div>
         </div>
       </div>

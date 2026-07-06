@@ -12,7 +12,7 @@ const FinalCTA = () => {
             <h2>Ready to turn one-time buyers into lifelong regulars?</h2>
             <p>Join growing businesses using OwnRewards to drive revenue and increase customer retention — no credit card required.</p>
             <div className="cta-actions">
-              <Link to="/register" style={{ textDecoration: 'none' }}>
+              <a href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <button id="finalcta-btn-2" style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   background: '#fff', color: 'var(--primary)',
@@ -27,7 +27,7 @@ const FinalCTA = () => {
                 >
                   Get Started Free →
                 </button>
-              </Link>
+              </a>
               <a href="#contact" onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });

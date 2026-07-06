@@ -3,6 +3,36 @@ import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
 import Button from './Button';
 import './Pricing.css';
+import { AnimatePresence } from 'framer-motion';
+
+const PricingFeatures = ({ features }) => {
+  const [expanded, setExpanded] = useState(false);
+  const LIMIT = 5;
+  const hasMore = features.length > LIMIT;
+  const visibleFeatures = expanded ? features : features.slice(0, LIMIT);
+
+  return (
+    <div className="pricing-features animate-on-scroll fade-up">
+      <ul>
+        {visibleFeatures.map((feature, idx) => (
+          <li key={idx}>
+            <Check size={18} className="check-icon" />
+            {feature}
+          </li>
+        ))}
+      </ul>
+      {hasMore && (
+        <button 
+          className="mt-4 toggle-features-btn"
+          style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 0, fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary)' }}
+          onClick={() => setExpanded(!expanded)}
+        >
+          {expanded ? 'Show less ↑' : `+ ${features.length - LIMIT} more included ▾`}
+        </button>
+      )}
+    </div>
+  );
+};
 
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -127,16 +157,7 @@ const Pricing = () => {
                 </div>
               </div>
               
-              <div className="pricing-features animate-on-scroll fade-up">
-                <ul>
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx}>
-                      <Check size={18} className="check-icon" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <PricingFeatures features={plan.features} />
               
               <div className="pricing-footer mt-auto pt-6 border-t border-border/50 animate-on-scroll fade-up">
                 {plan.cta === "Contact Sales" ? (
@@ -149,17 +170,16 @@ const Pricing = () => {
                     </Button>
                   </a>
                 ) : (
-                  <Link to="/register" style={{ textDecoration: 'none', display: 'block', width: '100%' }}>
-                    <Button variant="custom" className={`w-full pricing-btn ${plan.highlighted ? 'pricing-btn-primary' : 'pricing-btn-outline'}`} rightIcon={<ArrowRight size={18} />}>
-                      {plan.cta}
-                    </Button>
-                  </Link>
+                  <a href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', width: '100%' }}>
+                    <button className="pricing-btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                      Get Started Free <ArrowRight size={16} style={{ marginLeft: '6px' }} />
+                    </button>
+                  </a>
                 )}
               </div>
             </div>
-          ))}
-        </div>
       </div>
+
       {/* Decorative Glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-magenta opacity-10 blur-[150px] rounded-full pointer-events-none -z-10" />
     </section>

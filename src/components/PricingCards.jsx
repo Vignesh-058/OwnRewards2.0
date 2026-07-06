@@ -1,7 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Check, X } from 'lucide-react';
+import { Check, X, ChevronDown, ChevronUp } from 'lucide-react';
 import './PricingCards.css';
+
+const PricingCardFeatures = ({ features }) => {
+  const [expanded, setExpanded] = useState(false);
+  const LIMIT = 6;
+  const hasMore = features.length > LIMIT;
+  const visibleFeatures = expanded ? features : features.slice(0, LIMIT);
+
+  return (
+    <div className="pc-features-container animate-on-scroll fade-up">
+      <ul className="pc-features">
+        {visibleFeatures.map((f, idx) => (
+          <li key={idx} className={f.included ? 'pc-included' : 'pc-excluded'}>
+            <span className={`pc-icon ${f.included ? 'icon-included' : 'icon-excluded'}`}>
+              {f.included ? <Check size={18} strokeWidth={2.5} /> : <X size={18} strokeWidth={2} />}
+            </span>
+            <span>{f.text}</span>
+          </li>
+        ))}
+      </ul>
+      {hasMore && (
+        <button 
+          className="toggle-features-btn"
+          style={{ 
+            background: 'transparent', 
+            border: 'none', 
+            cursor: 'pointer', 
+            padding: '12px 0 0 0', 
+            fontSize: '0.85rem', 
+            fontWeight: 700, 
+            color: 'var(--primary)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px'
+          }}
+          onClick={() => setExpanded(!expanded)}
+        >
+          {expanded ? (
+            <>Show less <ChevronUp size={14} style={{ marginLeft: '2px', opacity: 0.7 }} /></>
+          ) : (
+            <>+ {features.length - LIMIT} more included <ChevronDown size={14} style={{ marginLeft: '2px', opacity: 0.7 }} /></>
+          )}
+        </button>
+      )}
+    </div>
+  );
+};
 
 const plans = [
   {
@@ -99,22 +145,13 @@ const PricingCards = () => {
                   <p className="pc-sub">{plan.sub}</p>
                 </div>
                 
-                <Link to="/register" className={plan.btnClass}>
+                <a href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer" className={plan.btnClass}>
                   {plan.btnText}
-                </Link>
+                </a>
                 
                 <div className="pc-divider" />
                 
-                <ul className="pc-features animate-on-scroll fade-up">
-                  {plan.features.map((f, idx) => (
-                    <li key={idx} className={f.included ? 'pc-included' : 'pc-excluded'}>
-                      <span className={`pc-icon ${f.included ? 'icon-included' : 'icon-excluded'}`}>
-                        {f.included ? <Check size={18} strokeWidth={2.5} /> : <X size={18} strokeWidth={2} />}
-                      </span>
-                      <span>{f.text}</span>
-                    </li>
-                  ))}
-                </ul>
+                <PricingCardFeatures features={plan.features} />
               </div>
             </div>
           ))}

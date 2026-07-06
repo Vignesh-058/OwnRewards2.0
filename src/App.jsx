@@ -18,8 +18,6 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const HowItWorksPage = lazy(() => import('./pages/HowItWorksPage'));
 const UseCasesPage = lazy(() => import('./pages/UseCasesPage'));
 const AnalyticsPage = lazy(() => import('./pages/AnalyticsPage'));
-const Login = lazy(() => import('./pages/Login'));
-const Register = lazy(() => import('./pages/Register'));
 
 function App() {
   return (
@@ -38,9 +36,6 @@ function App() {
               <Route path="use-cases" element={<UseCasesPage />} />
               <Route path="analytics" element={<AnalyticsPage />} />
             </Route>
-            
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
           </Routes>
         </Suspense>
         <CookieConsent />

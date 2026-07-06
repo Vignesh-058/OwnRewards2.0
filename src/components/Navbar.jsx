@@ -72,11 +72,11 @@ const Navbar = () => {
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
 
-            <Link to="/register" className="hidden-mobile" style={{ textDecoration: 'none' }}>
+            <a href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer" className="hidden-mobile" style={{ textDecoration: 'none' }}>
               <button id="navbar-btn-2" className="navbar-cta-btn hover-glow">
                 Start Free <ArrowRight size={15} style={{ marginLeft: '4px', verticalAlign: 'middle' }} />
               </button>
-            </Link>
+            </a>
 
             <button id="navbar-btn-3"
               className="mobile-menu-toggle"
@@ -115,15 +115,15 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="mobile-drawer-divider" />
-          <Link
-            to="/register"
+          <a
+            href="https://workspace.ownchat.app/" target="_blank" rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             style={{ textDecoration: 'none' }}
           >
             <button id="navbar-btn-6" className="navbar-cta-btn" style={{ width: '100%', justifyContent: 'center' }}>
               Get Started Free <ArrowRight size={15} style={{ marginLeft: '4px' }} />
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </>
