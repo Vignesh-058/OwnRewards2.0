@@ -14,6 +14,15 @@ const ExitIntentModal = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent('exitModalState', { detail: { isVisible } }));
+    if (isVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isVisible]);
+  
   // Form State
   const [formData, setFormData] = useState({
     industry: '',

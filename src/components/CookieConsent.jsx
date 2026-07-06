@@ -4,25 +4,58 @@ import './CookieConsent.css';
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
-    const cookieConsent = localStorage.getItem('ownRewards_cookie_consent_v3');
-    if (!cookieConsent) {
+    const handleModal = (e) => setIsModalVisible(e.detail.isVisible);
+    window.addEventListener('exitModalState', handleModal);
+    return () => window.removeEventListener('exitModalState', handleModal);
+  }, []);
+
+  useEffect(() => {
+    const rawConsent = localStorage.getItem('ownRewards_cookie_consent_v4');
+    
+    if (!rawConsent) {
       setIsVisible(true);
+      return;
+    }
+
+    try {
+      const consent = JSON.parse(rawConsent);
+      
+      // If rejected, check if enough time has passed to ask again
+      if (consent.status === 'rejected') {
+        const timePassed = Date.now() - consent.timestamp;
+        
+        // 1 minute in milliseconds (change this to 24 * 60 * 60 * 1000 for 24 hours)
+        const REASK_TIME_MS = 60 * 1000; 
+        
+        if (timePassed > REASK_TIME_MS) {
+          setIsVisible(true);
+        }
+      }
+    } catch (e) {
+      // Fallback if they have the old string format
+      if (rawConsent !== 'accepted') setIsVisible(true);
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('ownRewards_cookie_consent_v3', 'accepted');
+    localStorage.setItem('ownRewards_cookie_consent_v4', JSON.stringify({ status: 'accepted', timestamp: Date.now() }));
     setIsVisible(false);
   };
 
   const handleReject = () => {
-    localStorage.setItem('ownRewards_cookie_consent_v3', 'rejected');
+    localStorage.setItem('ownRewards_cookie_consent_v4', JSON.stringify({ status: 'rejected', timestamp: Date.now() }));
     setIsVisible(false);
+    
+    // Automatically bring it back after 1 minute if they don't refresh the page
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 60 * 1000);
   };
 
-  if (!isVisible) return null;
+  if (!isVisible || isModalVisible) return null;
 
   return (
     <div className="cookie-banner-wrapper">
