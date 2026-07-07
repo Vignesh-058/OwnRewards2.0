@@ -421,12 +421,23 @@
    RESPONSIVE
    ======================== */
 
-/* 768px+ — side by side */
+/* 768px+ — adjust padding but keep stacked */
 @media (min-width: 768px) {
   .home-hero-container {
+    gap: 40px;
+  }
+  .home-hero-h1 {
+    font-size: clamp(3rem, 7vw, 4.2rem);
+  }
+}
+
+/* 1024px+ — side by side */
+@media (min-width: 1024px) {
+  .home-hero-container {
     flex-direction: row;
+    gap: 40px;
+    justify-content: space-between;
     align-items: center;
-    gap: 60px;
   }
   .home-hero-left {
     text-align: left;
@@ -440,16 +451,6 @@
   }
   .home-hero-right {
     flex: 0 0 auto;
-  }
-}
-
-/* 1024px+ */
-@media (min-width: 1024px) {
-  .home-hero-container {
-    gap: 40px; /* Reduced gap since space-between handles it */
-    justify-content: space-between;
-  }
-  .home-hero-right {
     max-width: 440px;
     display: flex;
     justify-content: flex-end;

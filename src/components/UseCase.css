@@ -168,8 +168,7 @@
 .uc-mock {
   display: flex;
   justify-content: center;
-  position: sticky;
-  top: 120px; /* Makes the mock card sticky on scroll instead of floating centrally */
+  position: relative;
 }
 
 .uc-mock .mock-card {
@@ -177,9 +176,24 @@
   width: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .uc-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .uc-mock {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .uc-grid {
     gap: 80px;
+  }
+  
+  .uc-mock {
+    top: 120px;
   }
 }

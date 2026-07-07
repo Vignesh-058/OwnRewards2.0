@@ -256,30 +256,25 @@
   }
 }
 
-/* Tablets: 768px+ — show desktop links */
+/* Tablets: 768px+ */
 @media (min-width: 768px) {
   .navbar {
     height: 72px;
-  }
-  .navbar-desktop-links {
-    display: flex;
-  }
-  .mobile-menu-toggle {
-    display: none;
   }
   .navbar-cta-btn {
     font-size: 0.9rem;
     padding: 10px 22px;
   }
-  .hidden-mobile {
-    display: flex !important;
-  }
 }
 
-/* Laptops: 1024px+ — spread out links more */
+/* Laptops: 1024px+ — show desktop links */
 @media (min-width: 1024px) {
   .navbar-desktop-links {
-    gap: 40px;
+    display: flex;
+    gap: 32px;
+  }
+  .mobile-menu-toggle {
+    display: none;
   }
   .nav-link {
     font-size: 0.95rem;
@@ -287,6 +282,9 @@
   .navbar-cta-btn {
     font-size: 0.92rem;
     padding: 10px 24px;
+  }
+  .hidden-mobile {
+    display: flex !important;
   }
 }
 
