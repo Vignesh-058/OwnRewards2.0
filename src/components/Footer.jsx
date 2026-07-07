@@ -19,11 +19,11 @@ const Footer = () => {
           <div className="footer-brand">
             <Logo size={28} />
             <div className="footer-brand-title">
-              Business Messaging<br />
-              <span className="text-primary">made simple</span>
+              Customer Loyalty<br />
+              <span className="text-primary">engineered</span>
             </div>
             <p className="footer-description">
-              Official Meta Business Partner with Meta-certified experts delivering compliant, scalable WhatsApp and Instagram automation.
+              The all-in-one enterprise platform for points, tiered rewards, referrals, and automated retention.
             </p>
             
 
@@ -32,17 +32,17 @@ const Footer = () => {
           <div className="footer-links-group">
             <h4 className="footer-title">Product</h4>
             <Link to="/features">Features</Link>
+            <Link to="/how-it-works">How It Works</Link>
+            <Link to="/use-cases">Use Cases</Link>
             <Link to="/pricing">Pricing</Link>
-            <Link to="/features">Integrations</Link>
-            <Link to="/features">Changelog</Link>
           </div>
           
           <div className="footer-links-group">
-            <h4 className="footer-title">Resources</h4>
-            <Link to="/about">Documentation</Link>
-            <Link to="/about">API Reference</Link>
-            <Link to="/about">Blog</Link>
-            <Link to="/about">Community</Link>
+            <h4 className="footer-title">Company</h4>
+            <Link to="/about">About Us</Link>
+            <Link to="/resources">Resources & Blog</Link>
+            <Link to="/analytics">Analytics Hub</Link>
+            <Link to="/contact">Contact</Link>
           </div>
 
           <div className="footer-links-group">
@@ -67,15 +67,15 @@ const Footer = () => {
             <h4 className="footer-title">Contact</h4>
             <div className="contact-item">
               <Mail size={16} className="text-primary" />
-              <span>hello@OwnRewards.com</span>
+              <a href="mailto:hello@OwnRewards.com" className="hover:text-primary transition-colors">hello@OwnRewards.com</a>
             </div>
             <div className="contact-item">
               <Phone size={16} className="text-primary" />
-              <span>+91 98765 43210</span>
+              <a href="tel:+919999999999" className="hover:text-primary transition-colors">+91 99999 99999</a>
             </div>
             <div className="contact-item">
               <MapPin size={16} className="text-primary" />
-              <span>Thiruvarur</span>
+              <a href="https://maps.app.goo.gl/52oUYhJPijge3puB7" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Thiruvarur</a>
             </div>
           </div>
         </div>
@@ -85,13 +85,12 @@ const Footer = () => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta" className="meta-logo" />
             <div className="meta-partner-text">Business Partner</div>
           </div>
-
           <div className="footer-social">
-            <a href="#" className="social-link" aria-label="Facebook"><FacebookIcon /></a>
-            <a href="#" className="social-link" aria-label="X (Twitter)"><XIcon /></a>
-            <a href="#" className="social-link" aria-label="LinkedIn"><LinkedinIcon /></a>
-            <a href="#" className="social-link" aria-label="YouTube"><YoutubeIcon /></a>
-            <a href="#" className="social-link" aria-label="Instagram"><InstagramIcon /></a>
+            <a href="https://www.facebook.com/ieyalsolutions/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook"><FacebookIcon /></a>
+            <a href="https://x.com/Ownchatofficial" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="X (Twitter)"><XIcon /></a>
+            <a href="https://www.linkedin.com/company/ieyalsolutions/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><LinkedinIcon /></a>
+            <a href="https://www.youtube.com/@ieyalsolutions" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="YouTube"><YoutubeIcon /></a>
+            <a href="https://www.instagram.com/ieyalsolutions/?hl=en" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><InstagramIcon /></a>
           </div>
         </div>
 
@@ -99,7 +98,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-copyright">
             <p className="copyright-main">&copy; 2026 <span>OwnRewards</span>. All rights reserved.</p>
-            <p className="copyright-sub">Powering smart conversations in India.</p>
+            <p className="copyright-sub">Powering smart customer retention worldwide.</p>
           </div>
 
           <div className="footer-legal">

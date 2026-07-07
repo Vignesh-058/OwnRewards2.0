@@ -53,21 +53,13 @@ const FAQ = () => {
                   {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
                 </div>
               </div>
-              <AnimatePresence>
-                {activeIndex === index && (
-                  <div
-                    
-                    
-                    
-                    
-                    className="faq-answer-container"
-                  >
-                    <div className="faq-answer">
-                      {faq.answer}
-                    </div>
+              {activeIndex === index && (
+                <div className="faq-answer-container">
+                  <div className="faq-answer">
+                    {faq.answer}
                   </div>
-                )}
-              </AnimatePresence>
+                </div>
+              )}
             </div>
           ))}
         </div>

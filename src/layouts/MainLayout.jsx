@@ -16,6 +16,7 @@ const MainLayout = () => {
       <Navbar />
       <main 
         key={location.pathname}
+        className="page-transition"
       >
         <Outlet />
       </main>

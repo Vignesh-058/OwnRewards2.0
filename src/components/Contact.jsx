@@ -48,7 +48,7 @@ const Contact = () => {
                 <div className="method-icon"><Phone size={24} /></div>
                 <div>
                   <h4>Call Us</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p><a href="tel:+919999999999" className="hover:text-primary transition-colors">+91 99999 99999</a></p>
                   <p className="text-sm text-primary mt-1">Available during business hours</p>
                 </div>
               </GlassCard>
@@ -57,8 +57,8 @@ const Contact = () => {
                 <div className="method-icon"><Clock size={24} /></div>
                 <div>
                   <h4>Business Hours</h4>
-                  <p>Monday - Friday: 9 AM - 6 PM PST</p>
-                  <p>Saturday - Sunday: Closed</p>
+                  <p>Monday - Saturday: 9:00 AM - 6:30 PM</p>
+                  <p>Sunday: Closed</p>
                 </div>
               </GlassCard>
 
@@ -66,14 +66,20 @@ const Contact = () => {
                 <div className="method-icon"><MapPin size={24} /></div>
                 <div>
                   <h4>Headquarters</h4>
-                  <p>123 Loyalty Lane, Tech District<br/>San Francisco, CA 94105</p>
+                  <p>Thiruvarur</p>
                   
-                  {/* Google Map Placeholder */}
-                  <div className="map-placeholder mt-4">
-                    <div className="map-inner">
-                      <MapPin size={32} className="text-primary mb-2" />
-                      <span>View on Google Maps</span>
-                    </div>
+                  {/* Google Map Iframe */}
+                  <div className="mt-4" style={{ borderRadius: '12px', overflow: 'hidden', height: '160px', border: '1px solid var(--border)' }}>
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125433.87677465063!2d79.5598687784013!3d10.746098050868843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5546e4c7ba9d19%3A0x6b4fb712953258c7!2sThiruvarur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1720367351000!5m2!1sen!2sin" 
+                      width="100%" 
+                      height="100%" 
+                      style={{ border: 0 }} 
+                      allowFullScreen="" 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Headquarters Location"
+                    ></iframe>
                   </div>
                 </div>
               </GlassCard>
@@ -81,7 +87,7 @@ const Contact = () => {
 
             <div className="contact-social mt-8 text-center">
               <h4 className="text-sm font-semibold text-text-tertiary uppercase tracking-wider mb-4">Connect With Us</h4>
-              <div className="flex justify-center gap-4">
+              <div className="social-icons-row">
                 <a href="#" className="social-icon-btn"><MessageCircle size={20} /></a>
                 <a href="#" className="social-icon-btn"><Briefcase size={20} /></a>
                 <a href="#" className="social-icon-btn"><Globe size={20} /></a>

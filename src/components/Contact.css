@@ -114,6 +114,12 @@
   transform: translateY(-2px);
 }
 
+.social-icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
 .contact-form-wrapper {
   background: var(--surface-glass);
   backdrop-filter: blur(24px);
