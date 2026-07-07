@@ -197,7 +197,7 @@
   opacity: 0.5;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .pc-grid {
     grid-template-columns: repeat(3, 1fr);
   }
