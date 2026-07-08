@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import CursorGlow from '../components/CursorGlow';
 import ScrollProgress from '../components/ScrollProgress';
 import BackToTop from '../components/BackToTop';
+import TrustedClients from '../components/TrustedClients';
 
 const MainLayout = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const MainLayout = () => {
       >
         <Outlet />
       </main>
+      <TrustedClients />
       <Footer />
       <BackToTop />
     </div>

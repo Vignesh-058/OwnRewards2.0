@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, ArrowLeft, Paperclip, Mic } from 'lucide-react';
+import { MessageCircle, X, ArrowLeft, Paperclip, Mic, Send } from 'lucide-react';
 import './ChatWidget.css';
 import OwnRewardIcon from '../assets/Ownreward icon.svg';
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [message, setMessage] = useState('');
 
   return (
     <div className="chat-widget-wrapper">
@@ -43,15 +44,24 @@ const ChatWidget = () => {
             </div>
           </div>
           
-          <div className="chat-window-footer">
-            <div className="chat-input-wrapper">
-              <input type="text" placeholder="Write a message..." />
-              <div className="chat-input-actions">
-                <button><Paperclip size={18} /></button>
-                <button><Mic size={18} /></button>
+            <div className="chat-window-footer">
+              <div className="chat-input-wrapper">
+                <input 
+                  type="text" 
+                  placeholder="Write a message..." 
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+                <div className="chat-input-actions">
+                  <button><Paperclip size={18} /></button>
+                  {message.trim().length > 0 ? (
+                    <button className="text-primary"><Send size={18} /></button>
+                  ) : (
+                    <button><Mic size={18} /></button>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
           <div className="chat-window-branding">
             Powered by <img src={OwnRewardIcon} alt="OwnRewards" className="branding-icon" /> OwnRewards
           </div>
